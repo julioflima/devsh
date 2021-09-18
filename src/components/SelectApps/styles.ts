@@ -61,7 +61,7 @@ export const ContainerCategories = styled.div`
     justify-content: space-evenly;
 `;
 
-export const ButtonDownload = styled.button`
+export const ButtonDownload = styled.a`
     width: fit-content;
     margin: auto;
     margin-top: 5em;
@@ -72,5 +72,6 @@ export const ButtonDownload = styled.button`
     border: 0;
     border-radius: 25px;
     cursor: pointer;
+    text-decoration: none;
 
 `;

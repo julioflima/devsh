@@ -9,7 +9,8 @@ interface ICategory {
 interface IApp {
   name: string,
   commands: string,
-  icon: string
+  icon: string,
+  defaultCheck: boolean
 }
 
 function Footer() {
@@ -17,9 +18,9 @@ function Footer() {
   function AppSelector(app: IApp){
     return (
       <AppSelect className="AppSelect">
-        <input width={30} height={30} type="checkbox" name={app.name?.toString()}/>
+        <input width={30} height={30} type="checkbox" name={app.name?.toString()} defaultChecked={app.defaultCheck} disabled={true}/>
         {app.icon && (
-          <img src={app.icon} />
+          <img src={app.icon} alt={app.name}/>
         )}
         <span>
           {app.name}
@@ -48,7 +49,7 @@ function Footer() {
           }
         </ContainerCategories>
 
-        <ButtonDownload>
+        <ButtonDownload href="./install.sh" download>
           Download
         </ButtonDownload>
     </Container>
