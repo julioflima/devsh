@@ -15,7 +15,7 @@ function Footer() {
         <IoCopyOutline />
       </Instruction>
 
-      <HelpPost>
+      <HelpPost className="noselect">
         Does not find something you like?
         <a href="www.google.com" target="_blank" className="logo">
           Help us!

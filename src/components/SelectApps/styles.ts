@@ -28,6 +28,7 @@ export const AppSelect = styled.div`
     text-align: left;
     font-size: 20px;
     display: flex;
+    font-family: monospace;
 
     img {
         width: 20px;
@@ -43,6 +44,10 @@ export const AppSelect = styled.div`
         margin-right: 15px;
         margin-left: 0;
         cursor: pointer;
+    }
+    input[type="checkbox"]{
+        width: 20px; /*Desired width*/
+        height: 20px; /*Desired height*/
     }
 `;
 
