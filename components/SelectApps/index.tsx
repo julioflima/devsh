@@ -1,4 +1,4 @@
-import apps from './../../data/apps.json';
+import apps from '../../../src/data/apps.json';
 import { AppSelect, ButtonDownload, CategorySection, Container, ContainerCategories, Title } from './styles';
 
 interface ICategory {
