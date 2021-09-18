@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
  :root {
@@ -18,8 +18,10 @@ export default createGlobalStyle`
  
    ::selection {
    color:  ${({ theme }) => theme.colors.secondary.one};
-   background: ${({ theme }) => `${theme.colors.primary.one}a0`} linear-gradient(0deg, ${({ theme }) =>
-  `${theme.colors.primary.one}a0`} 0%, ${({ theme }) => `${theme.colors.primary.one}a0`} 100%);
+   background: ${({ theme }) =>
+     `${theme.colors.primary.one}a0`} linear-gradient(0deg, ${({ theme }) =>
+  `${theme.colors.primary.one}a0`} 0%, ${({ theme }) =>
+  `${theme.colors.primary.one}a0`} 100%);
    }
 
    ::-webkit-scrollbar-track {
@@ -57,9 +59,10 @@ export default createGlobalStyle`
   width: 100%;
   position: fixed;
   overflow: hidden;
-  background: radial-gradient(ellipse at bottom, ${({ theme }) => theme.colors.primary.one}, ${({ theme }) =>
-  theme.colors.primary.one}),
-             radial-gradient(ellipse at top, ${({ theme }) => theme.colors.primary.one}, ${({ theme }) =>
+  background: radial-gradient(ellipse at bottom, ${({ theme }) =>
+    theme.colors.primary.one}, ${({ theme }) => theme.colors.primary.one}),
+             radial-gradient(ellipse at top, ${({ theme }) =>
+               theme.colors.primary.one}, ${({ theme }) =>
   theme.colors.primary.one});
 
   @media (max-width: 972px) {

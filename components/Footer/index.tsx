@@ -1,11 +1,12 @@
-import { IoCopyOutline } from 'react-icons/io5';
-import { ContainerHeader, FooterNote, HelpPost, Instruction } from './styles';
+import React from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { ContainerHeader, FooterNote, HelpPost, Instruction } from "./styles";
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <ContainerHeader>
       <span className="noselect">Installation Guide :</span>
-      <br></br>
+      <br />
       <Instruction>
         <span>chmod +x ./Downloads/install.sh</span>
         <IoCopyOutline />
@@ -24,14 +25,18 @@ function Footer() {
 
       <FooterNote className="noselect">
         <span>
-          Made with ❤️ by{' '}
-          <a href="https://github.com/MelisseCabral" target="_blank">
+          {" Made with ❤️ by "}
+          <a
+            href="https://github.com/MelisseCabral"
+            target="_blank"
+            rel="noreferrer"
+          >
             Melisse Cabral
           </a>
         </span>
       </FooterNote>
     </ContainerHeader>
   );
-}
+};
 
 export default Footer;
