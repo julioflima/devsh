@@ -1,4 +1,4 @@
-import { AppProps } from "next/app";
+import type AppProps from "next/app";
 import React from "react";
 import { Footer, Header, InstallationGuide } from "../components";
 import { Article, Main } from "../components/UI/styles";
