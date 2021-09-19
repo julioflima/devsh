@@ -1,4 +1,4 @@
-import { IoCopyOutline } from "react-icons/io5";
+import { Copy } from "@styled-icons/ionicons-outline";
 import styled from "styled-components";
 import { Box } from "../UI/styles";
 
@@ -33,13 +33,6 @@ export const Command = styled.div`
   align-items: center;
 `;
 
-export const Separator = styled.div`
-  font-family: var(--system-fonts-primary);
-  font-size: 1rem;
-  margin: 1rem 0;
-  user-select: none;
-`;
-
 export const Instruction = styled(Box)`
   box-shadow: none;
   background-color: ${({ theme }) => theme.colors.tertiary.two};
@@ -49,6 +42,9 @@ export const Instruction = styled(Box)`
   }
 `;
 
-export const IconCopy = styled(IoCopyOutline)`
+export const IconCopy = styled(Copy)`
   cursor: pointer;
+  border: 0 !important;
+
+  width: 1.2rem;
 `;

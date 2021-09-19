@@ -543,7 +543,7 @@ html{
 }
 
 ::selection {
-  background: ${({ theme }) => theme.colors.secondary.one};
+  background: ${({ theme }) => theme.colors.quaternary.one};
 }
 
 
