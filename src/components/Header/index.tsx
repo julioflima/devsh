@@ -1,18 +1,29 @@
 import React from "react";
-import { ContainerHeader } from "./styles";
+import { Box } from "../UI/styles";
+import {
+  Container,
+  ContentGrid,
+  ContentTitle,
+  Subtitle,
+  Title,
+} from "./styles";
 
 const Header: React.FC = () => {
   return (
-    <ContainerHeader>
-      {"</> DevSH"}
-      <span>The easiest way to a clean start.</span>
-      <br />
-      <span>
-        {"Choose the applications and download a shell script to install all "}
-        <br />
-        the dev tools you need for your debian system!
-      </span>
-    </ContainerHeader>
+    <Container>
+      <div>
+        <ContentGrid>
+          <ContentTitle>
+            <Title>{"</> DevSH"}</Title>
+            <Subtitle>The easiest way to a clean start.</Subtitle>
+          </ContentTitle>
+          <Box>
+            Choose the applications and download a shell script to install all
+            the dev tools you need for your debian system!_
+          </Box>
+        </ContentGrid>
+      </div>
+    </Container>
   );
 };
 

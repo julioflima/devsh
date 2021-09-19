@@ -14,8 +14,5 @@ export const theme = {
     quaternary: {
       one: "#000000",
     },
-    quintenary: {
-      one: "#000000",
-    },
   },
 };

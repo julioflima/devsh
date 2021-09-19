@@ -1,38 +1,54 @@
+import { IoCopyOutline } from "react-icons/io5";
 import styled from "styled-components";
+import { Box } from "../UI/styles";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary.one};
-  width: 100%;
   color: ${({ theme }) => theme.colors.tertiary.one};
-  padding-top: 3em;
-  padding-bottom: 3em;
-  display: grid;
-  font-family: monospace;
-  font-size: 24px;
-`;
-
-export const Instruction = styled.div`
-  background-color: ${({ theme }) => theme.colors.tertiary.two};
-  width: fit-content;
-  padding: 1em;
-  border-radius: 10px;
-  margin: auto;
-  font-family: monospace;
-  margin-bottom: 1em;
-  display: flex;
-
-  span {
-    font-family: monospace;
-    font-size: 20px;
-    margin-right: 15px;
-  }
-`;
-
-export const FooterNote = styled.div`
-  bottom: 5px;
   width: 100%;
-  position: relative;
-  span {
-    font-size: 14px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+
+  & > div {
+    padding: 2rem 0;
+    display: grid;
+    height: 100%;
   }
+`;
+
+export const Command = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Separator = styled.div`
+  font-family: var(--system-fonts-primary);
+  font-size: 1rem;
+  margin: 1rem 0;
+  user-select: none;
+`;
+
+export const Instruction = styled(Box)`
+  box-shadow: none;
+  background-color: ${({ theme }) => theme.colors.tertiary.two};
+
+  & span {
+    margin-right: 1rem;
+  }
+`;
+
+export const IconCopy = styled(IoCopyOutline)`
+  cursor: pointer;
 `;

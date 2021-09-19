@@ -1,41 +1,38 @@
 import styled from "styled-components";
+import { H2 } from "../UI/styles";
 
 export const Container = styled.form`
-  width: 100%;
   color: ${({ theme }) => theme.colors.quaternary.one};
-  padding: 2em;
-  display: grid;
-  font-family: sans-serif;
   width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
 
-  div {
-    margin-top: 1em;
+export const Title = styled(H2)`
+  color: ${({ theme }) => theme.colors.quaternary.one};
+  font-weight: 500;
+`;
+
+export const Section = styled.div`
+  & > span {
+    text-align: left;
+    font-size: 20px;
+    font-family: var(--system-fonts-secondary);
   }
-`;
-
-export const Title = styled.div`
-  font-weight: 600;
-  text-align: left;
-  font-size: 28px;
-  width: 100%;
-  user-select: none;
-`;
-
-export const CategorySection = styled.div`
-  text-align: left;
-  font-size: 24px;
 `;
 
 export const ContainerCategories = styled.div`
   display: inline-flex;
   justify-content: space-evenly;
+  padding: 2em;
 `;
 
 export const ButtonDownload = styled.a`
   width: fit-content;
   margin: auto;
-  margin-top: 5em;
-  font-size: 24px;
+  font-size: 20px;
   background-color: ${({ theme }) => theme.colors.secondary.one};
   padding: 10px 20px;
   color: ${({ theme }) => theme.colors.tertiary.one};
@@ -43,4 +40,39 @@ export const ButtonDownload = styled.a`
   border-radius: 25px;
   cursor: pointer;
   text-decoration: none;
+  font-family: var(--system-fonts-secondary);
+`;
+
+export const Selector = styled.div`
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+  margin-top: 25px;
+  user-select: none;
+
+  & img {
+    width: 20px;
+    margin: auto;
+    margin-right: 15px;
+    margin-left: 0;
+  }
+
+  & input {
+    font-size: 16px;
+    margin: auto;
+    margin-right: 15px;
+    margin-left: 0;
+    cursor: pointer;
+  }
+
+  & input[type="checkbox"] {
+    width: 20px; /*Desired width*/
+    height: 20px; /*Desired height*/
+  }
+
+  & span {
+    font-family: var(--system-fonts-secondary);
+    font-size: 1rem;
+    user-select: none;
+  }
 `;

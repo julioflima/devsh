@@ -1,22 +1,39 @@
-import React from "react";
-import { IoCopyOutline } from "react-icons/io5";
-import { Container, Instruction } from "./styles";
+import React, { MouseEvent } from "react";
+import { H2 } from "../UI/styles";
+import { commands } from "./data";
+import {
+  Command,
+  Container,
+  Content,
+  IconCopy,
+  Instruction,
+  Separator,
+} from "./styles";
 
-const Footer: React.FC = () => {
+const InstallationGuide: React.FC = () => {
+  const handleCopy = (e: MouseEvent): void => {
+    const value = String(e.currentTarget.getAttribute("data-value"));
+    navigator.clipboard.writeText(value);
+  };
+
   return (
     <Container>
-      <span className="noselect">Installation Guide :</span>
-      <br />
-      <Instruction>
-        <span>chmod +x ./Downloads/install.sh</span>
-        <IoCopyOutline />
-      </Instruction>
-      <Instruction>
-        <span>./Downloads/install.sh</span>
-        <IoCopyOutline />
-      </Instruction>
+      <H2>Installation Guide:</H2>
+      <Content>
+        <div>
+          {commands.map((command, index) => (
+            <Command key={command}>
+              <Instruction>
+                <span>{command}</span>
+                <IconCopy onClick={handleCopy} data-value={command} />
+              </Instruction>
+              {index !== commands.length - 1 && <Separator>or</Separator>}
+            </Command>
+          ))}
+        </div>
+      </Content>
     </Container>
   );
 };
 
-export default Footer;
+export default InstallationGuide;

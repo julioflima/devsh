@@ -326,23 +326,6 @@ ul {
 }
 
 /**
- * Tailwind custom reset styles
- */
-
-/**
- * 1. Use the user's configured 'sans' font-family (with Tailwind's default
- *    sans-serif font stack as a fallback) as a sane default.
- * 2. Use Tailwind's default "normal" line-height so the user isn't forced
- *    to override it to ensure consistency even when using the default theme.
- */
-
-html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* 1 */
-  line-height: 1.5; /* 2 */
-}
-
-/**
  * Inherit font-family and line-height from 'html' so users can set them as
  * a class directly on the 'html' element.
  */
@@ -513,8 +496,21 @@ Remove the margin in all browsers.
  * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
  */
 
+
+
+@font-face {
+  font-family: "Sketch 3D";
+  src: url("/fonts/sketch_3d.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+
 :root {
-  --system-fonts-primary: Roboto, 
+  --system-fonts-primary: "Roboto Mono", monospace, sans-serif;
+
+  --system-fonts-secondary: Roboto, 
   -apple-system,
   BlinkMacSystemFont,
   'Segoe UI',
@@ -524,6 +520,9 @@ Remove the margin in all browsers.
   'Apple Color Emoji',
   'Segoe UI Emoji',
   'Segoe UI Symbol';
+
+
+  --system-fonts-logo: "Sketch 3D", monospace, sans-serif;
 }
 
 *{
@@ -542,6 +541,11 @@ html{
   height: 100%;
   width: 100%;
 }
+
+::selection {
+  background: ${({ theme }) => theme.colors.secondary.one};
+}
+
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
@@ -568,19 +572,9 @@ html{
 }
 
 #__next{
-  display: flex;
-  flex: 1;
-  flex-direction: column;
   height: 100%;
   width: 100%;
-  position: relative;
-  
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-#__next > *{
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 `;
