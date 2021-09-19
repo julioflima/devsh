@@ -3,6 +3,8 @@ import { apps } from "../../data/apps";
 import { ICategory } from "./ISelectApps";
 import {
   ButtonDownload,
+  ButtonRaw,
+  ButtonsContainer,
   Container,
   ContainerCategories,
   Section,
@@ -35,9 +37,16 @@ const Footer: React.FC = () => {
           </Section>
         ))}
       </ContainerCategories>
-      <ButtonDownload href="./install.sh" download>
-        Download
-      </ButtonDownload>
+      <ButtonsContainer>
+        <div>
+          <ButtonDownload href="./install.sh" download>
+            Download
+          </ButtonDownload>
+          <ButtonRaw href=".api/raw/install.sh" target="_blank">
+            RAW
+          </ButtonRaw>
+        </div>
+      </ButtonsContainer>
     </Container>
   );
 };

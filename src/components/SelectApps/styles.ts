@@ -44,6 +44,27 @@ export const ButtonDownload = styled.a`
   font-family: var(--system-fonts-secondary);
 `;
 
+export const ButtonRaw = styled(ButtonDownload)`
+  background-color: ${({ theme }) => theme.colors.tertiary.two};
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+  }
+`;
+
 export const Selector = styled.div`
   text-align: left;
   font-size: 20px;
