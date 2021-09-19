@@ -17,6 +17,7 @@ export const Title = styled(H2)`
 
 export const Section = styled.div`
   & > span {
+    user-select: none;
     text-align: left;
     font-size: 20px;
     font-family: var(--system-fonts-secondary);
@@ -48,7 +49,6 @@ export const Selector = styled.div`
   font-size: 20px;
   display: flex;
   margin-top: 25px;
-  user-select: none;
 
   & img {
     width: 20px;
