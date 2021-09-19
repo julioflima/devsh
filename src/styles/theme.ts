@@ -2,29 +2,17 @@
 export const theme = {
   colors: {
     primary: {
-      one: "#161A36",
-      two: "#212040",
-      three: "#242444",
-      four: "#556FE5",
-      five: "#076ACE",
-      six: "#3FB7FE",
+      one: "#1abc9c",
     },
     secondary: {
-      one: "#FFEB39",
-      two: "#FFDF39",
-      three: "#FFC839",
-      four: "#E1A766",
-      six: "orange",
+      one: "#e67e22",
     },
     tertiary: {
-      one: "#FF395D",
-      two: "#FF398C",
-      three: "#FF8FC5",
+      one: "#ffffff",
+      two: "#666666",
     },
     quaternary: {
-      one: "#ffffff",
-      two: "#636366",
-      three: "#454B6B",
+      one: "#000000",
     },
     quintenary: {
       one: "#000000",

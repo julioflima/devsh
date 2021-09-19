@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.form`
   width: 100%;
-  color: black;
+  color: ${({ theme }) => theme.colors.quaternary.one};
   padding: 2em;
   display: grid;
   font-family: sans-serif;
@@ -36,9 +36,9 @@ export const ButtonDownload = styled.a`
   margin: auto;
   margin-top: 5em;
   font-size: 24px;
-  background-color: #e67e22;
+  background-color: ${({ theme }) => theme.colors.secondary.one};
   padding: 10px 20px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.tertiary.one};
   border: 0;
   border-radius: 25px;
   cursor: pointer;

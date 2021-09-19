@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const ContainerHeader = styled.div`
-  background-color: #1abc9c;
+  background-color: ${({ theme }) => theme.colors.primary.one};
   width: 100%;
-  color: white;
+  color: ${({ theme }) => theme.colors.tertiary.one};
   padding-top: 3em;
   padding-bottom: 3em;
   display: grid;
@@ -12,7 +12,7 @@ export const ContainerHeader = styled.div`
 `;
 
 export const Instruction = styled.div`
-  background-color: #666;
+  background-color: ${({ theme }) => theme.colors.tertiary.two};
   width: fit-content;
   padding: 1em;
   border-radius: 10px;

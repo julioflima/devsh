@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
             name="description"
             content="Debian bundle installation of Dev Tools."
           />
-          <link rel="icon" href="/favicon.svg" />
+          <link rel="icon" href="/favicon.png" />
           <meta charSet="utf-8" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,8 +57,9 @@ export default class MyDocument extends Document {
 
           <link
             rel="preconnect"
-            href=" https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap"
           />
+          <link href="/fonts/sketch_3d.otf" />
 
           <script async src="https://polyfill.io/v3/polyfill.js" />
         </Head>

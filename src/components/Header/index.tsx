@@ -3,7 +3,7 @@ import { ContainerHeader } from "./styles";
 
 const Header: React.FC = () => {
   return (
-    <ContainerHeader className="noselect">
+    <ContainerHeader>
       {"</> DevSH"}
       <span>The easiest way to a clean start.</span>
       <br />
