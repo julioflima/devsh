@@ -1,24 +1,17 @@
 import React from "react";
-import { IoCopyOutline } from "react-icons/io5";
-import { ContainerHeader, FooterNote, HelpPost, Instruction } from "./styles";
+import { Container, FooterNote, HelpPost } from "./styles";
 
 const Footer: React.FC = () => {
   return (
-    <ContainerHeader>
-      <span className="noselect">Installation Guide :</span>
-      <br />
-      <Instruction>
-        <span>chmod +x ./Downloads/install.sh</span>
-        <IoCopyOutline />
-      </Instruction>
-      <Instruction>
-        <span>./Downloads/install.sh</span>
-        <IoCopyOutline />
-      </Instruction>
-
+    <Container>
       <HelpPost className="noselect">
         Does not find something you like?
-        <a href="www.google.com" target="_blank" className="logo">
+        <a
+          href="https://github.com/MelisseCabral/devsh"
+          target="_blank"
+          className="logo"
+          rel="noreferrer"
+        >
           Help us!
         </a>
       </HelpPost>
@@ -35,7 +28,7 @@ const Footer: React.FC = () => {
           </a>
         </span>
       </FooterNote>
-    </ContainerHeader>
+    </Container>
   );
 };
 

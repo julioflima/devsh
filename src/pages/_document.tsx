@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
             name="description"
             content="Debian bundle installation of Dev Tools."
           />
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/logo.svg" />
           <meta charSet="utf-8" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />

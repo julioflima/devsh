@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 import React from "react";
-import { Footer, Header } from "../components";
+import { Footer, Header, InstallationGuide } from "../components";
 import GlobalStyle from "../styles/globals";
 import Theme from "../styles/Theme";
 
@@ -9,6 +9,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     <Theme>
       <Header />
       <Component {...pageProps} />
+      <InstallationGuide />
       <Footer />
       <GlobalStyle />
     </Theme>

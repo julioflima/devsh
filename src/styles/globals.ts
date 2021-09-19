@@ -564,9 +564,23 @@ html{
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: ${({ theme }) => theme.colors.primary.one};
+  background-color: ${({ theme }) => theme.colors.secondary.one};
 }
 
-#root{
+#__next{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#__next > *{
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 `;
